@@ -37,7 +37,7 @@ const questions = () => {
             type: 'checkbox',
             name: 'licenses',
             message: 'Which license are you using for your project?',
-            choices: ['No License','MIT License','Mozilla Public License 2.0','Apache License 2.0','Boost Software License 1.0'],
+            choices: ['No License','MIT','MPL-2.0','Apache-2.0','BSL-1.0'],
             validate: licenses => {
                 if (licenses) {
                     return true;
