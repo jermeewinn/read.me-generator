@@ -7,10 +7,10 @@ const questions = () => {
     return inquirer.prompt([
         {
             type: 'input',
-            name: 'projectName',
+            name: 'title',
             message: 'What is the name of your project?',
-            validate: projectNameInput => {
-                if (projectNameInput) {
+            validate: title => {
+                if (title) {
                     return true;
                 } else {
                     console.log('Please provide the name of your project!');
@@ -55,20 +55,35 @@ const questions = () => {
         {
             type: 'input',
             name: 'questions1',
-            message: 'Enter the link to your the GitHub repository for your project.',
+            message: 'What is your GitHub username?',
             validate: questions1 => {
                 if (questions1) {
                     return true;
                 } else {
-                    console.log('We need a link to the GitHub repository in order to create a quality READ.me file.');
+                    console.log('We need your GitHub username.');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'questions2',
+            message: 'What is the best email address to contact you?',
+            validate: questions2 => {
+                if (questions2) {
+                    return true;
+                } else {
+                    console.log('We need a way to contact you through email. Please provide an email address for us to reach you.');
                     return false;
                 }
             }
         }
     ]);
-
+};
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+
+}
 
 // TODO: Create a function to initialize app
 function init() {}
