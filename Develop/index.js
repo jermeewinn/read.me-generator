@@ -4,7 +4,9 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 // TODO: Create an array of questions for user input
 const questions = () => {
-    return inquirer.prompt([
+    return inquirer
+    // Insert Questions Here
+    .prompt([
         {
             type: 'input',
             name: 'title',
@@ -78,15 +80,23 @@ const questions = () => {
                 }
             }
         }
-    ]);
+    ])
+    // User answers go here
+    .then((data) => {
+        writeToFile('title',data)
+    })
 };
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-
+    console.log('Saving File',data)
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    questions();
+}
 
 // Function call to initialize app
 init();
+//Note to self. Make a folder called "output." Save the output READ.me files to this file.
+//Check the curriculum in Module 9 to see how exactly one is able to save their work and where to targe the saved work.
