@@ -20,14 +20,30 @@ function renderLicenseBadge(licenses) {
 function renderLicenseLink(licenses) {
   if (licenses == 'No License') {
     return `https://choosealicense.com/no-permission/`
-  }
-  return `https://opensource.org/licenses/${licenses}`
+  };
+  if (licenses == 'MIT') {
+    return `https://opensource.org/licenses/MIT`
+  };
+  if (licenses == 'MPL-2.0') {
+    return `https://opensource.org/licenses/MPL-2.0`
+  };
+  if (licenses == 'Apache-2.0') {
+    return `https://opensource.org/licenses/Apache-2.0`
+  };
+  if (licenses == 'BSL-1.0') {
+    return `https://opensource.org/licenses/BSL-1.0`
+  };
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(licenses) {
+  if (licenses == 'No ') {
+    return ''
+  };
+  if (licenses == 'MIT') {
 
+  }
 }
 
 // TODO: Create a function to generate markdown for README
