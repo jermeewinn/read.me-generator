@@ -13,7 +13,7 @@ function renderLicenseBadge(licenses) {
   if (licenses == 'BSL-1.0') {
     return `https://img.shields.io/badge/License-Boost1.0-green.svg`
   };
-}
+};
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -33,7 +33,7 @@ function renderLicenseLink(licenses) {
   if (licenses == 'BSL-1.0') {
     return `https://opensource.org/licenses/BSL-1.0`
   };
-}
+};
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -41,9 +41,6 @@ function renderLicenseSection(licenses) {
   if (licenses == 'No ') {
     return ''
   };
-  if (licenses == 'MIT') {
-
-  }
 }
 
 // TODO: Create a function to generate markdown for README
@@ -66,7 +63,17 @@ function generateMarkdown(data) {
   ${data.installation}
 
   ## Licenses
+  [![license](${renderLicenseBadge(data.license)})]
+
   The license we are using for this project is the ${data.licenses}.
+
+  Terms and conditions of this license can be found here: 
+  [!${renderLicenseLink(data.license)}]
+
+  ## Collaboration
+  If you would like to contribute to this project, please do the following:
+  1) Read through the Contributor Covenenat at https://www.contributor-covenant.org/version/2/1/code_of_conduct/.
+  2) Contact the project owner. Contact information can be found in the "Questions" section
 
   
   ## Testing
