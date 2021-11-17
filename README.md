@@ -10,6 +10,8 @@ This project demonstrates how Node.js is used to create professional READ.me fil
 5) How to test the project.
 6) Ways to contact the project admin through email or GitHub.
 
+The generated READ.md file shown in the video can be found in the Develop folder.
+
 ## Demonstration of the Project
 https://watch.screencastify.com/v/FZO99q1F4gPta9ndrJWc
 
