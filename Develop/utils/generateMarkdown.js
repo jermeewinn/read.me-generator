@@ -51,24 +51,24 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Contents
-  * [Description](#description)
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Collaboration](#collaboration)
-  * [Licenses](#licenses)
-  * [Testing](#testing)
-  * [Questions](#questions)
+  * [Description](#Description)
+  * [Installation](#Installation)
+  * [Usage](#Usage)
+  * [Collaboration](#Collaboration)
+  * [Licenses](#Licenses)
+  * [Testing](#Testing)
+  * [Questions](#Questions)
   
   ## Installation
   ${data.installation}
 
   ## Licenses
-  [![license](${renderLicenseBadge(data.license)})]
+  ![licenses](${renderLicenseBadge(data.licenses)})
 
   The license we are using for this project is the ${data.licenses}.
 
   Terms and conditions of this license can be found here: 
-  [!${renderLicenseLink(data.license)}]
+  ${renderLicenseLink(data.licenses)}
 
   ## Collaboration
   If you would like to contribute to this project, please do the following:
